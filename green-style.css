@@ -1,0 +1,307 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 100%;
+    background: #F1F1F1;
+}
+
+/* for dialouge displaying  background => background: #0000ff */
+
+*, html {
+    --primaryGradient: linear-gradient(93.12deg, #181C98 0.52%, #3f00ff 100%);
+    --secondaryGradient: linear-gradient(268.91deg, #181C98 -2.14%, #3CCDE7 99.69%);
+    --primaryBoxShadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
+    --primary: #0247fe;
+}
+
+/* for question background displaying --primary:*/
+
+/* CHATBOX
+=============== */
+.chatbox {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+/* CONTENT IS CLOSE */
+.chatbox__support {
+    display: flex;
+    flex-direction: column;
+    background: #eee;
+    width: 300px;
+    height: 375px;
+    z-index: -123456;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+/* CONTENT ISOPEN  translateY(-40px); for position at bottom*/
+.chatbox--active {
+    transform: translateY(-40px);
+    z-index: 123456;
+    opacity: 1;
+}
+
+/* BUTTON */
+.chatbox__button {
+    text-align: right;
+}
+
+.send__button {
+    padding: 6px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+
+/* HEADER */
+.chatbox__header {
+    position: sticky;
+    top: 0;
+    background: orange;
+}
+
+/* MESSAGES */
+.chatbox__messages {
+    margin-top: auto;
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column-reverse;
+}
+
+.messages__item {
+    background: orange;
+    max-width: 69.6%;
+    width: fit-content;
+}
+
+.messages__item--operator {
+    margin-left: auto;
+    font-size: 90%;
+}
+
+.messages__item--visitor {
+    margin-right: auto;
+    font-size: 100%;
+}
+
+/* FOOTER */
+.chatbox__footer {
+    position: sticky;
+    bottom: 0;
+    outline: none;
+}
+
+.chatbox__support {
+    background: #efefef;
+    height: 500px;
+    width: 375px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* HEADER */
+.chatbox__header {
+    background: var(--primaryGradient);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   /* justify-content: center;*/
+    padding: 5px 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: var(--primaryBoxShadow);
+}
+
+.chatbox__image--header {
+    margin-right: 10px;
+    padding: 3px 6px;
+}
+
+.chatbox__heading--header {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.chatbox__description--header {
+    font-size: .9rem;
+    color: white;
+}
+
+/* Messages */
+.chatbox__messages {
+    padding: 0 20px;
+}
+
+/* for answers background displaying*/
+.messages__item {
+    margin-top: 10px;
+    background: #f9f9f9;
+    padding: 10px 20px;
+    max-width: 93%;
+}
+
+.messages__item--visitor,
+.messages__item--typing {
+    margin-left: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.messages__item--operator {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: var(--primary);
+    color: white;
+}
+
+/* FOOTER */
+.chatbox__footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px 3px;
+    /*background: var(--secondaryGradient);
+    box-shadow: var(--secondaryBoxShadow);*/
+    background: #ffffff;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.chatbox__footer input {
+    width: 80%;
+    padding: 3px 3px;
+    border-radius: 2px;
+    background: #ffffff;
+    outline: none;
+    text-align: left;
+}
+
+.chatbox__send--footer {
+    color: blue;
+}
+
+.chatbox__button button,
+.chatbox__button button:focus,
+.chatbox__button button:visited {
+    width: 50px;
+    background: #0066cb;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    box-shadow: 0px 5px 9px rgb(0 0 0 / 30%);
+    cursor: pointer;
+    height: 50px;
+    padding: 10px;
+}
+
+.cbot-btn {
+    background-color: #FFF;
+    color: #1E90FF;
+    width: auto;
+    font-size: 90%;
+    padding: 5px 7px;
+    text-decoration: none;
+    border: 1;
+    border-color: #1E90FF;
+    margin-right: 15px;
+    white-space: nowrap;
+    border-radius: 5px;
+   
+    display: inline-block;
+    text-decoration: none;
+    font: bold 11px sans-serif;
+    background: white; /* #fd7c2a */
+    -webkit-transition: background 2s; /* For Safari 3.0 to 6.0 */
+    transition: background 2s; /* For modern browsers */
+}
+.cbot-btn:hover {
+    background: #1E90FF;
+    color: white;
+    border: 1;   
+}
+
+
+.row {
+    margin-top: 10px;
+    padding: 1px 2px;
+    min-width: 100%;
+    word-wrap: break-word;
+
+}
+.d-flex{
+   display:flex;
+   
+}
+.column {
+  float: left;
+  width: 50%;
+}
+
+
+.cbot-btn2 {
+    background-color: #FFF;
+    color: #1E90FF;
+    width: auto;
+    font-size: 90%;
+    font: bold 11px sans-serif;
+    padding: 6px 10px;
+    text-decoration: none;
+    border: 1;
+    border-color: #1E90FF;
+    margin-right: 15px;
+    white-space: nowrap;
+    border-radius: 5px;   
+}
+.cbot-btn2:hover {
+    color: #6600FF;
+}
+
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/*****dj****/
+#djClosed {cursor: pointer; position: absolute; right: 15px;}
+.chatbox__button{cursor: pointer;}
+
+/* width */
+::-webkit-scrollbar {width: 10px;}
+
+/* Track */
+::-webkit-scrollbar-track {background: #cbcddb;}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {background: #9fa3c1; border-radius: 0px; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {background: #7d82a4; }
+/*.chatbox .messages__item{background: #efefef !important}*/
+
+a {-webkit-text-decoration-color: rgba(13,110,253,0.7) !important; text-decoration-color: rgba(13,110,253,0.7) !important; }
+
+p img {padding-right: 15px;}
+
+table, th, td {border-color: rgb(13 110 253 / 25%) !important; padding: 3px;}
+.modal-backdrop.show {opacity: .7 !important;}

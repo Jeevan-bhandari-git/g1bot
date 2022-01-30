@@ -1,0 +1,52 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "Hi there", "Hello", "Good day","How are you"],
+         "responses": ["Hey :-)","Hello, thanks for asking Margun", "Good to see you again", "Hi there, how can Margun help you?"],
+         "context": [""],
+"urls": [""],
+"imgs": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye","Goodbye","Till next time"],
+         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+         "context": [""],
+"urls": [""],
+"imgs": [""]
+        },
+        {"tag": "myself",
+         "patterns": ["what is your name?", "who are you?", "introduce yourself"],
+         "responses": ["Margun!", "I'm Margun", "My name is Margun","This is Margun", "Margun is here"],
+         "context": [""],
+"urls": [""],
+"imgs": [""]
+        },
+        {"tag": "yourname",
+         "patterns": ["what is my name", "myname", "my name"],
+         "responses": ["Happy to help!", "Sorry, I am not trained for this question, would you like to write a proper related question below. Please!."],
+         "context": [""],
+"urls": [""],
+"imgs": [""]
+        },        
+        {"tag": "thanksby",
+         "patterns": ["Thanks", "Thank you", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"],
+         "context": [""],
+"urls": [""],
+"imgs": [""]
+        },
+        {"tag": "livetalk",
+         "patterns": ["talk to marg", "chat with ", "chat to ", "talk with", "talk"],
+         "responses": ["*live*chat*"],
+         "context": [""],
+"urls": [""],
+"imgs": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [""],
+         "responses": ["noans"],
+         "context": [""],
+"urls": [""],
+"imgs": [""]
+        }
+   ]
+}
